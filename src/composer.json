@@ -1,0 +1,17 @@
+{
+  "authors": [
+    {
+      "name": "Barna",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.0",
+    "phpseclib/phpseclib": "3.0.10",
+    "phpoffice/phpspreadsheet": "^1.18",
+    "jfcherng/php-diff": "^6.12",
+  },
+  "config": {
+    "platform-check": false
+  }
+}
