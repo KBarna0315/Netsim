@@ -40,6 +40,9 @@ th {
     white-space: nowrap;
     z-index: 10000;
 }
+.rightButtonMenu.visible{
+    display: block;
+}
 .menu-item {
     list-style: none;
     margin: 0px;
@@ -66,4 +69,7 @@ th {
 .menu-item-shortcut {
     opacity: .5;
     margin-left: 1em;
+}
+.button-shortcut-text {
+    opacity: .5;
 }
