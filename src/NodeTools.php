@@ -1,6 +1,6 @@
 <?php
 
-class NodeTools
+class NodeTools extends CommonTools
 {
 //Globals
 public $node = array(); //params of the node
