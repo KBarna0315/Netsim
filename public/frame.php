@@ -30,7 +30,7 @@
         position: fixed;
         z-index: 10000;
         width: 150px;
-        background: #1b1a1a;
+        background-color: #666;
         border-radius: 5px;
         transform: scale(0);
         transform-origin: top left;
@@ -77,7 +77,7 @@
 
     </div>
 
-<div id="context-menu" class="rightButtonMenu" onmouseup="this.style.display = 'none';" style="position: absolute;">
+<div id="context-menu" onmouseup="this.style.display = 'none';" style="position: absolute;">
     <div class="item">Add new Node</div>
     <div class="item">Create Link</div>
     <div class="item">Delete Link</div>
