@@ -10,6 +10,11 @@
 body {
     background: #f2f2f2;
     user-select: none;
+    width: 100%;
+    height: 100%;
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 table {
     font-family: Light-font;
@@ -29,47 +34,35 @@ td, th {
 th {
     user-select: none;
 }
-.rightButtonMenu {
-    display: none;
+.button-big:hover {
+    background-color: #ddd
+}
+
+
+
+#context-menu {
     position: fixed;
-    border: 1px solid #B2B2B2;
-    background: #f2f2f2;
-    box-shadow: 2pt 2pt 1pt #999999;
-    border-radius: 4pt;
-    font-family: 'Regular-font';
-    white-space: nowrap;
     z-index: 10000;
+    width: 150px;
+    background: #1b1a1a;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: top left;
 }
-.rightButtonMenu.visible{
-    display: block;
+
+#context-menu.visible {
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
 }
-.menu-item {
-    list-style: none;
-    margin: 0px;
-    padding-top: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 3px;
+
+#context-menu .item {
+    padding: 8px 10px;
     font-size: 15px;
-    color: #333333;
+    color: #eee;
     cursor: pointer;
+    border-radius: inherit;
 }
 
-.menu-item:hover {
-    color: white;
-    background: #999999;
-    border-radius: 2px;
-}
-
-.menu-item-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu-item-shortcut {
-    opacity: .5;
-    margin-left: 1em;
-}
-.button-shortcut-text {
-    opacity: .5;
+#context-menu .item:hover {
+    background: #343434;
 }
