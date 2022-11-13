@@ -1,0 +1,346 @@
+/*
+in phpcatalog db:
+UPDATE `field` SET `Color` = '#CD5430' WHERE `field`.`Color` = '#DC143C';
+UPDATE `field` SET `Color` = '#48B8D0' WHERE `field`.`Color` = '#0000CD';
+ */
+
+
+@font-face {
+    font-family: Nexa-Light;
+    src: url('../fonts/Nexa-Light.otf');
+}
+
+@font-face {
+    font-family: Nexa-Bold;
+    src: url('../fonts/Nexa-Bold.otf');
+}
+
+*:not(.Rack-Front_){
+    font-family: Nexa-Light ;
+}
+#nui_header input[type='text'], #nui_header select, #nui_header button, #nui_right input[type='text'], #nui_right select, #nui_right button {
+    font-family: Nexa-Light;
+}
+select, input{
+
+    padding: 5px !important;
+    border-radius: 5px;
+    border: solid 1px #D3D3D3;
+    font-family: Light-font;
+
+}
+
+button {
+    padding: 5px !important;
+    border-radius: 5px;
+    border: solid 1px #D3D3D3;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 4px 11px rgb(130 130 130 / 35%);
+}
+
+
+#nui_left_lower .inspectorFieldContainer>input[type=text],
+#nui_left_lower .inspectorFieldContainer>input[type=password],
+#nui_left_lower .inspectorFieldContainer>input[type=color],
+#nui_left_lower .inspectorFieldContainer>select {
+    display: block;
+    padding: 20px 3px 0px 0.3rem !important;
+    width: 100% !important;
+    margin: 2px;
+    border-radius: 5px;
+    height: calc(1.5em + 1.5rem + 0.01rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+#nui_left_lower .inspector-chb-container {
+    padding: 0px 3px 0px 0.3rem !important;
+    margin-left: 0px;
+    margin-top: 25px;
+    min-height: 15px;
+    border: none;
+}
+
+#nui_left_lower .inspectorFieldContainer>input[type=checkbox]{
+    width: calc(100% - 5px) !important;
+}
+
+.inspectorFieldContainer.inspector-chbselect-container{
+    margin: 5px 2px;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #ababab;
+    width: calc(100% - 5px) !important;
+}
+#nui_left_lower .inspectorFieldContainer>select {
+
+    word-wrap: normal;
+    font-size: 10pt;
+    line-height: inherit;
+    text-transform: none;
+    box-sizing: border-box;
+    background: #f7f7f7;
+    font-family: 'Light-font';
+}
+
+#nui_left_lower .inspectorFieldContainer>label {
+    display: block;
+    position: relative;
+    height: 0;
+    overflow: visible;
+    top: 12px;
+    left: -1px;
+    padding-left: 0.5rem;
+    font-size: 12px;
+    color: #444;
+    font-family: Nexa-Bold;
+}
+
+rect#background {
+    fill: #D3D3D3;
+    stroke: #CD5430;
+}
+#rect1,#rect2,#rect3,#rect4,#rect5,#rect6,#rect7{
+    fill: #f8f7ea !important;
+}
+#nui_header {
+    background-color: #FFF;
+    color: #474646;
+}
+
+
+
+#nui_tools .button-big:not(img[src*="assets/icons/SaveToolbar24.svg"], img[src*="assets/icons/Up24.svg"], img[src*="Search"]), #nui_toprightdiv .button-big, .popup  .button-big{
+    filter: grayscale(100) brightness(64%)  contrast(97%);
+}
+#nui_tools .button-big, #nui_toprightdiv .button-big, .popup  .button-big{
+    border-right: solid 1px rgba(0,0,0,0.2) ;
+}
+
+#nui_left_lower #nui_inspector-type .button-big,
+#nui_left_lower #nui_inspector-type .button-big:hover{
+    filter: grayscale(100) brightness(200%)  contrast(97%);
+    padding: 5px 0;
+}
+
+.button-big:hover {
+    background-color: transparent;
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.2) ) !important;
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.4)) !important;
+
+}
+
+#nui_inspector-type .button-big:hover {
+    background-color: transparent;
+    filter: grayscale(100) brightness(180%)  contrast(97%) drop-shadow(0px 0px 2px rgba(255,255,255,0.4)) !important
+}
+
+.button-big:last-child{
+    border: none;
+}
+
+
+#nui_left_lower #nui_inspector-form {
+    top: 38px;
+}
+
+
+
+.popup {
+    background-color: #f0f0f0;
+    border-radius: 5pt;
+    box-shadow: 2pt 2pt 3.5pt 3.5pt rgb(0 0 0 / 20%);
+}
+.popup table {
+    padding: 1px;
+    padding-top: 4px;
+    border-spacing: 0px;
+}
+
+#nui_left_lower .inspectorHeaderButton {
+    width: 20px;
+    height: 20px;
+}
+
+#nui_left_lower .keyField label {
+    color: #CD5430;
+}
+
+
+#nui_left_lower #nui_inspector-type {
+    background-color: #666;/*#CD5430;*/
+    color: #FFF;
+    padding: 5px;
+    border-bottom: 2px solid #555555;
+    line-height: 1.5;
+    width: calc(100% - 10px);
+
+}
+#nui_left_lower #nui_inspector-type.addNode {
+    background-color: #CD5430;
+}
+.project-button, .table-button, .login-button {
+    background: linear-gradient(180deg, #828282 0%, #474646 100%);
+    box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+.project-button:hover,.login-button, .table-button:hover {
+    /*background: linear-gradient(180deg, #474646 0%, #828282 100%);*/
+    filter: brightness(130%);
+    box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.load-project-button, .login-button{
+    background: linear-gradient(0deg, #CD5430 0%, #ED8C52 100%);
+    box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #ddd;
+    padding: 15px;
+    font-weight: 100 !important;
+}
+.project-button-red{
+    background: linear-gradient(0deg, #db110a 0%, #ec6d6d 100%);
+    box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.05);
+}
+
+.save-button{
+    background: linear-gradient(0deg, #305e69 0%, #5792a1 100%);
+
+}
+.accordion-button{
+    background: linear-gradient(90deg, #D3D3D3 0%, #F0F0F0 100%);
+    box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.05);
+    color:#000;
+    border: solid 2px #aaa;
+}
+
+#nui_left_lower #nui_inspector-type .button-big, .popup  .button-big {
+grayscale(100) brightness(64%)  contrast(97%) !important
+
+}
+
+#nui_browserTree .caret::before, #nui_left_lower .caret::before {
+    color: #cc5431;
+}
+
+#nui_left_lower .display-field>input[type="text"] {
+    border: 1px solid #d3d3d3;
+    outline-color: #d3d3d3;
+}
+#nui_left_lower .display-field, #nui_left_lower .display-field>input[type="text"] {
+    font-weight: normal;
+    color: black;
+}
+
+#nui_left_lower .keyField label, #nui_left_lower .keyField>input[type=text] {
+    font-weight: bold;
+    color: #3b889d;
+}
+
+.popupCloseButton{
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 12px ;
+    /*background-color: #cc5431;
+    margin: 2px;
+    line-height:18px;
+    font-family: Arial;*/
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+.popupCloseButton:hover{
+    background: none
+}
+.popupCloseButton img{
+    height: 24px;
+    width: 24px;
+    margin: 3px 0 0 -9px;
+    transition: transform .3s ease-in-out;
+}
+.popupCloseButton:hover img{
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.4)) !important;
+    transform: rotate(180deg);
+
+}
+#nui_alignbar{
+    padding-top: 8px;
+}
+
+#nui_browserTree .selectedBrowserElement {
+    background-color: #e3d26f;
+    padding: 3px;
+}
+#nui_browserTree .browserImg:hover:not(.selectedBrowserElement)+.browserTextSpan, #nui_browserTree .browserTextSpan:hover:not(.selectedBrowserElement) {
+    background-color: #e3d26f;
+    padding: 0px;
+}
+.popup td{
+    padding: 3px !important;
+}
+.popup .button-big{
+    width: 30px;
+    height: 30px;
+}
+
+#def1:hover{
+    transform: translateX(10px) translateY(10px);
+}
+
+/* login */
+
+
+.login-logo{ display: none}
+
+.container{
+    background-color: white;
+    border-radius: 15px;
+    margin: 15px;
+    height: calc(100% - 30px);
+    width: calc(50% - 30px);
+    left: 0% !important;
+
+}
+@font-face{
+    font-family: Light-font;
+    src: url("../fonts/Aileron-Light.otf");
+}
+
+@font-face{
+    font-family: Regular-font;
+    src: url("../fonts/Aileron-Regular.otf");
+}
+input{
+    font-family: Light-font;
+
+}
+.login-input {
+
+    color: #555555;
+    border: 0.5px solid #ddd;
+    padding: 15px;
+}
+
+.announcement-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.announcement {
+    z-index: 15;
+    background: rgba(192,  49, 57, 0.7);
+    padding: 1rem;
+
+    border-radius: 15px;
+    width: 100%;
+    color: #ffffff;
+    border: 0px solid;
+    border-color: var(--netop-orange-hover);
+}
+
