@@ -23,3 +23,7 @@ function hideRightMenu(event) {
         }
     }
 }
+
+function rightClickMenuHandler(){
+//Ide kéne kiszervezni a right click menut
+}
