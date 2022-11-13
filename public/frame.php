@@ -65,10 +65,10 @@
             <a href="javascript:diagramResize('zoomFit');"><img src="assets/icons/Zoom24.svg" title="<?php /*echo AnytoolsClass::concatShortcutKeyText('Zoom Fit', 'zoomFit');*/?>" class="button-big"></a>
 -->
 
-            <a href=""><img src="assets/icons/SaveToolbar24.svg" title="Save Diagram" class="button-big"></a>
-            <a href=""><img src="assets/icons/ZoomIn24.svg" title="Zoom In" class="button-big"></a>
-            <a href=""><img src="assets/icons/ZoomOut24.svg" title="Zoom Out" class="button-big"></a>
-            <a href=""><img src="assets/icons/Zoom24.svg" title="Zoom Fit" class="button-big"></a>
+            <a href=""><img src="assets/icons/SaveToolbar24.svg" title="Save Diagram" class="button-big" alt="ToolbarSave"></a>
+            <a href=""><img src="assets/icons/ZoomIn24.svg" title="Zoom In" class="button-big" alt="ToolbarZoomIn"></a>
+            <a href=""><img src="assets/icons/ZoomOut24.svg" title="Zoom Out" class="button-big" alt="ToolbarZoomOut"></a>
+            <a href=""><img src="assets/icons/Zoom24.svg" title="Zoom Fit" class="button-big" alt="ToolbarZoomfit"></a>
         </div>
 
     </div>
@@ -167,14 +167,32 @@
         <span id="nui_inspectorHeaderText"></span>
     </div>
     <form id="nui_inspector-form">
-
+        <div id="container_insp_Name"> <!--Ide még kellene: oncontextmenu="showInspectorRightClickMenu()"-->
+            <label for="insp_Name" title="Name">Name:</label>
+            <input id="insp_Name" name="Name" value="PlaceHolderName" type="text">
+        </div>
+        <div id="container_insp_Type"> <!--Ide még kellene: oncontextmenu="showInspectorRightClickMenu()"-->
+            <label for="insp_Type" title="Type">Type:</label>
+            <input id="insp_Type" name="Type" value="PlaceHolderType" type="text">
+        </div>
+        <div id="container_insp_IPaddr"> <!--Ide még kellene: oncontextmenu="showInspectorRightClickMenu()"-->
+            <label for="insp_IPaddr" title="IPaddr">IP Address:</label>
+            <input id="insp_IPaddr" name="IPaddr" value="" type="text">
+        </div>
+        <div id="container_insp_Netmask"> <!--Ide még kellene: oncontextmenu="showInspectorRightClickMenu()"-->
+            <label for="insp_Netmask" title="Netmask">Netmask:</label>
+            <input id="insp_Netmask" name="Netmask" value="255.255.252.0" type="text">
+        </div>
+        <div id="container_insp_MAC"> <!--Ide még kellene: oncontextmenu="showInspectorRightClickMenu()"-->
+            <label for="insp_MAC" title="MAC">MAC:</label>
+            <input id="insp_MAC" name="MAC" value="" type="text">
+        </div>
     </form>
     <div id="nui_inspectorMenuContainer" class="rightButtonMenu">
         <div id="nui_renameInspectorObject" class="menu-item" onclick="renameInspectorObject()">Rename Object</div>
         <div id="nui_objTypeChange" class="menu-item" onclick="objTypeChange()">Object Type Change</div>
     </div>
     <div id="objectTypeContainer" class="rightButtonMenu">
-
     </div>
 </div>
 <div id="nui_horizontal_dragbar"></div>
