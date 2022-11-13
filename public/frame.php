@@ -57,7 +57,19 @@
 <body>
 <div id="nui_mainframe">
     <div id="nui_header">
+        <div class="nui_project_blocker_overlay"></div>
+        <div id="nui_tools">
+<!--            <a href="javascript:saveDiag();" style="display:inline-block;"><img src="assets/icons/SaveToolbar24.svg" title="<?php /*echo AnytoolsClass::concatShortcutKeyText('Diagram Save', 'saveDiag');*/?>" class="button-big"></a>
+            <a href="javascript:diagramResize('zoomIn');"><img src="assets/icons/ZoomIn24.svg" title="Zoom In" class="button-big"></a>
+            <a href="javascript:diagramResize('zoomOut');"><img src="assets/icons/ZoomOut24.svg" title="Zoom Out" class="button-big"></a>
+            <a href="javascript:diagramResize('zoomFit');"><img src="assets/icons/Zoom24.svg" title="<?php /*echo AnytoolsClass::concatShortcutKeyText('Zoom Fit', 'zoomFit');*/?>" class="button-big"></a>
+-->
 
+            <a href=""><img src="assets/icons/SaveToolbar24.svg" title="Save Diagram" class="button-big"></a>
+            <a href=""><img src="assets/icons/ZoomIn24.svg" title="Zoom In" class="button-big"></a>
+            <a href=""><img src="assets/icons/ZoomOut24.svg" title="Zoom Out" class="button-big"></a>
+            <a href=""><img src="assets/icons/Zoom24.svg" title="Zoom Fit" class="button-big"></a>
+        </div>
 
     </div>
 
