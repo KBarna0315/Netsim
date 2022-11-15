@@ -23,6 +23,32 @@ class Inspector
     }
 
     /**
+     * Set defaults for Node add inspector when Node doesn't have own function for it
+     *
+     * @param string $object is the object with keys-values, containing defaults from field table. This is modified here to set more defaults
+     * @param string $selectedObjType is the type of the selected object on the diagram when starting obj add
+     * @param string $selectedObjName is the name of the selected object on the diagram when starting obj add
+     * @param string $diagName is the name of the diagram where the obj add was started
+     */
+    private function setNewNodeInspectorDefaults(&$object, $selectedObjType, $selectedObjName, $diagName) {
+        $object['Site'] = "def";
+        $object['Name'] = "def" . '-' . substr(md5(rand()), 0, 3);
+    }
+
+    public function getInspectorAddObject($objType, $selectedObjType, $selectedObjName, $diagName, $diagType, $posX, $posY) {
+        if (!$objType) {
+            $objType = $this->objType;
+        }
+
+        if ($objType == 'Device' || $objType == 'TV' ||  $objType == 'Phone') {
+            $this->setNewNodeInspectorDefaults($object, $selectedObjType, $selectedObjName, $diagName);
+        }
+
+        $object['objType'] = $objType;
+        return array('object' => $object, 'fields' => $fields);
+    }
+
+    /**
      * Create new object with given params
      *
      * @param string $objType is the type of the object will be:PC,TV,Router,Switch,Phone
