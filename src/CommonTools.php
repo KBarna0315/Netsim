@@ -50,5 +50,17 @@ class CommonTools
         $this->objects = $objects;
         $this->objectTypes = $objTypes;//lehet $objtypes mabye typo
     }
+
+    /**
+     *
+     */
+    public function insertDevice(string $dbName): bool {
+
+        $sql_insert = "INSERT INTO `device`";
+        $fields = ' (' . implode(', ', $fields) . ')';
+        $values = '(' . implode(', ', $values) . ')';
+        $sql_insert .= $fields . ' VALUES ' . $values;
+        return $sql_insert;
+    }
 }
 
