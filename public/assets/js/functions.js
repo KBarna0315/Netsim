@@ -31,3 +31,8 @@ function fixupMouse(event) {
         };
     }
 }
+function allowDrop(ev) {
+    if (!globalContainer.reportIsDragged) {
+        ev.preventDefault();
+    }
+}
