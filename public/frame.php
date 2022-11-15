@@ -74,7 +74,9 @@
     </div>
 
     <div id="nui_inner">
+        <div id="nui_diagram"  ondrop="drop(event)" ondragover="allowDrop(event)">
 
+        </div>
     </div>
 
 <div id="context-menu" onmouseup="this.style.display = 'none';" style="position: absolute;">
