@@ -48,10 +48,18 @@ class Device extends NodeTools
         if ($object) {
             $this->node = $object;
         }
-
+        $this->addDevice();
     }
 
     public function deleteDevice($name){
+
+    }
+
+    public function addDevice() {
+        $this->node['objType'] = 'Device';
+
+        //Postition számolás?
+
 
     }
 
