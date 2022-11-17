@@ -11,23 +11,25 @@ function saveNewObjectFromInspector() {
     let frameWidth = frame.scrollWidth - 1;
     let frameHeight = frame.scrollHeight - 1;
     let type = "createNewObject";
-
+    let objType = "Device";
 
     let data = {
         type: type,
         objType: objType,
         object: object,
-        diagName: globalContainer.currDiag, //Idk kell-e
-        diagType: globalContainer.currDiagType, //Idk kell-e
+       // diagName: globalContainer.currDiag, //Idk kell-e
+       // diagType: globalContainer.currDiagType, //Idk kell-e
         width: frameWidth,
         height: frameHeight,
-        posX: globalContainer.addNodePosX,
-        posY: globalContainer.addNodePosY,
-        selectedObjName: globalContainer.selectedObjs[0]?.getAttribute("name"),
-        selectedObjType: globalContainer.selectedObjs[0]?.getAttribute("type")
+       /* posX: globalContainer.addNodePosX,
+        posY: globalContainer.addNodePosY,*/
+       /* selectedObjName: globalContainer.selectedObjs[0]?.getAttribute("name"),
+        selectedObjType: globalContainer.selectedObjs[0]?.getAttribute("type")*/
     };
 
     $.ajax({
+        url: '../src/ajax/JQueryTools.php',
+        type: 'POST',
         data: data,
         success: function (result) {
         //error handling
