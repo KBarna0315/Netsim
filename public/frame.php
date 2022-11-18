@@ -11,9 +11,11 @@
     <link rel="stylesheet" type="text/css" href="assets/css/template.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/ui.css"/>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"</script>
     <script type="text/javascript" src="assets/js/diagram.js"></script>
     <script type="text/javascript" src="assets/js/functions.js"></script>
     <script type="text/javascript" src="assets/js/inspector.js"></script>
+
 </head>
 
 
@@ -80,7 +82,7 @@
     </div>
 
 <div id="context-menu" onmouseup="this.style.display = 'none';" style="position: absolute;">
-    <div class="item">Add new Node</div>
+    <div class="item" onclick="saveNewObjectFromInspector()">Add new Node</div>
     <div class="item">Create Link</div>
     <div class="item">Delete Link</div>
 </div>
@@ -160,9 +162,6 @@
 
     </div>
 
-    <div id="nui_left_upper">
-
-    </div>
 
 <div id="nui_left_lower">
     <div id="nui_inspector-type">
@@ -197,9 +196,7 @@
     <div id="objectTypeContainer" class="rightButtonMenu">
     </div>
 </div>
-<div id="nui_horizontal_dragbar"></div>
 <div id="nui_vertical_dragbar"></div>
-<div id="nui_align_dragbar"></div>
 
 </div>
 
