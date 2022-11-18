@@ -59,6 +59,9 @@ class Device extends NodeTools
         $this->node['objType'] = 'Device';
 
         //Postition számolás?
+        $this->calcCoordNode();
+
+        $this->addNodeToDiag(true);
 
 
     }
