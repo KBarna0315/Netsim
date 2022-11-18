@@ -51,16 +51,32 @@ class CommonTools
         $this->objectTypes = $objTypes;//lehet $objtypes mabye typo
     }
 
-    /**
-     *
-     */
-    public function insertDevice(string $dbName): bool {
 
-        $sql_insert = "INSERT INTO `device`";
-        $fields = ' (' . implode(', ', $fields) . ')';
-        $values = '(' . implode(', ', $values) . ')';
-        $sql_insert .= $fields . ' VALUES ' . $values;
-        return $sql_insert;
+    /**
+     * Prepare 2 dim assoc. array from Catalog object table first key is the object type, second is field name
+     * @param string $obj is the object type
+     * @return array of object fields
+     */
+    public function expandObjects(&$objectTypes = null) {
+        $db = DB::Instance();
+        $query = "SELECT *  FROM `object`";
+        $object_rows = $db->selectRows('phpcatalog', $query);
+        $objectTypes = array_column($object_rows, 'Type');
+        $objects = array();
+        foreach ($object_rows as $object_row) {
+            $objType = null;
+            foreach ($object_row as $key => $value) {
+                if ($key == 'Type') {
+                    $objType = $value;
+                } else if (isset($objType)) {
+                    if (isset($value))  {
+                            $objects[$objType][$key] = $value;
+                        }
+                    }
+                }
+            }
+        return $objects;
     }
+
 }
 
