@@ -33,14 +33,32 @@ function saveNewObjectFromInspector() {
         data: data,
         success: function (result) {
         //error handling
+            if(handleAjaxErrors(result)){
+                return;
+            }
+            console.log("Na eddig eljutottunk");
 
-            let nodeOrLink = globalContainer.nodeTypes.includes(objType) ? "node" : "link"
-
-            loadBrowserData();
+/*            loadBrowserData();
             $.when(checkInDiagram(globalContainer.currDiag)).then(function () {
                 loadDiagramFromServer(globalContainer.currDiag, nodeOrLink, object['Name'], object['Name']);
-            });
+            });*/
 
         }
     });
 }
+
+/**
+ * Gets called on every input when an object is showed in inspector.
+ * Called by selects onchange listener and input's onkeyup listener
+ * @param {Event} event the type of the event
+ * @param {string} fieldName the name of the field, that's being modified
+ * @param {string} value the current value of the input field
+ * @param {string} objType the type of the object currently being editing
+ * @param {boolean} isNewObject true if its an object from addNewNode
+ * @param {{}} override An object of key-value pairs for overriding inspector values changed in the function.
+ */
+/* Idk if im gonna even use it for validating the fields of the inspector
+function onChangeListener(event, fieldName, value, objType, isNewObject, override = {}) {
+
+
+}*/
