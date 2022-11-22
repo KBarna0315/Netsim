@@ -36,3 +36,50 @@ function allowDrop(ev) {
         ev.preventDefault();
     }
 }
+
+/**
+ * Showing the accurate error message
+ * @param errorCode its the code of the error
+ * @param concatString
+ * @param stringData is an object, which can contain additional values we want to attach to a string
+ */
+function showError(errorCode, concatString, stringData = {}) {
+    if (!concatString) {
+        concatString = "";
+    }
+
+    let errorCodes = {
+        //Ide jönnek az errorok
+
+        "error0001": {
+            "en": "",
+            "hu": ""
+        },
+        "error0002": {
+            "en": "Warning",
+            "hu": "Figyelmezetés:"
+        }
+
+
+    }
+}
+
+/**
+ * @param ajaxResult {{
+ *     fatalError: string|undefined,
+ *     warning: string|undefined,
+ * }}
+ * @returns {boolean}
+ */
+function handleAjaxErrors(ajaxResult){
+    if(ajaxResult){
+        if(ajaxResult.fatalError){
+            showError("error2088", ajaxResult.fatalError);
+            return true;
+        } else if (ajaxResult.warning){
+            showError("error2106", ajaxResult.warning);
+            return true;
+        }
+    }
+    return false;
+}
