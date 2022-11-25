@@ -1,4 +1,4 @@
-function saveNewObjectFromInspector() {
+function addNewObjectFromInspector() {
 
     let fields = document.getElementById("nui_inspector-form").querySelectorAll("input, select");
     let object = {};
@@ -17,8 +17,6 @@ function saveNewObjectFromInspector() {
         type: type,
         objType: objType,
         object: object,
-       // diagName: globalContainer.currDiag, //Idk kell-e
-       // diagType: globalContainer.currDiagType, //Idk kell-e
         width: frameWidth,
         height: frameHeight,
        /* posX: globalContainer.addNodePosX,
