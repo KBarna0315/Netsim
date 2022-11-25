@@ -60,3 +60,46 @@ function onChangeListener(event, fieldName, value, objType, isNewObject, overrid
 
 
 }*/
+
+/**
+ * Create link between Device and Network
+ * @param startName right Click ont the Device
+ * @param endName
+ * @param label
+ */
+function createLink(startName=null, endName=null, label=null) {
+    if (!globalContainer.patchStartParams && !startName) {
+        return;
+    }
+
+    let savePromise=Promise.resolve();
+
+    $.when(savePromise).then(function () {
+        showLoader();
+
+        let data={
+            type: "createLink",
+            diagName: diagName ? diagName : globalContainer.currDiag,
+            startName: startName ? startName : globalContainer.patchStartParams.name,
+            endName: endName ? endName : globalContainer.selectedObjs[0].getAttribute('name'),
+            label: label
+        };
+
+        globalContainer.patchStartParams=null;
+      //  document.getElementById("nui_startPatchCreationText").innerText="Start patch creation";
+
+        $.ajax({
+            data: data,
+            success: function (result) {
+                if (handleAjaxErrors(result)) {
+                    return;
+                }
+
+                        if (result['newPatchTo']) {
+                            globalContainer.newPatchTo=result['newPatchTo'];
+                        }
+             //   loadDiagramFromServer(data.diagName, "link", "NULL", `${startName}=${endName}`);
+            }
+        });
+    });
+}
