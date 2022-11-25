@@ -82,9 +82,9 @@
     </div>
 
 <div id="context-menu" onmouseup="this.style.display = 'none';" style="position: absolute;">
-    <div class="item" onclick="saveNewObjectFromInspector()">Add new Node</div>
+    <div class="item" onclick="addNewObjectFromInspector()">Add new Node</div>
     <div class="item">Create Link</div>
-    <div class="item">Delete Link</div>
+    <div class="item">Add new Network</div>
 </div>
 
 <script>
