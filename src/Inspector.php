@@ -66,9 +66,13 @@ class Inspector
     public function createNewObject(string $objType, array $object, string $diag, int $width = null, int $height = null, int $posX = null, int $posY = null, bool $isLog = true, string $selectedObjName = '',string  $selectedObjType = '')
     {
         $success = false;
-        if ($objType == 'Device') {
+        if ($objType === 'Device') {
             $obj = new Device();
             $success = $obj->createDevice($diag, $width, $height, $posX, $posY, $object);
+        }
+        if($objType === 'Network') {
+            $obj = new Network();
+            $success = $obj->createNetwork($diag, $width, $height, $posX, $posY, $object);
         }
         //All the other creation based action comes here
 
