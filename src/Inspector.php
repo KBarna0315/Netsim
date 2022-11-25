@@ -74,6 +74,9 @@ class Inspector
             $obj = new Network();
             $success = $obj->createNetwork($diag, $width, $height, $posX, $posY, $object);
         }
+        if($objType === 'Link') {
+
+        }
         //All the other creation based action comes here
 
         return $success;
